@@ -1,4 +1,17 @@
 // firehose track 4, lesson 5 - file created 12 jun 17
 
-// next xx lines added 12 jun 17 to add bootstrap
+// next line added 12 jun 17 to add bootstrap
 @import "bootstrap";
+
+// navbar styling added 13 jun 17
+.navbar {
+  background: image_url('stardust.png');
+  box-shadow: 10px 10px 5px #2a2a2a;
+  margin-bottom: 0;
+}
+
+.navbar-inverse a.navbar-brand {
+  color: #A31F34;   // mit's official cardinal color
+  font-family: 'Righteous', cursive;
+  font-size: 30px;
+}
