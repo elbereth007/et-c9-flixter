@@ -3,7 +3,7 @@
 // next line added 12 jun 17 to add bootstrap
 @import "bootstrap";
 
-// navbar and hero styling added 13 jun 17
+// navbar/hero styling and all below added 13 jun 17
 .navbar {
   background: image_url('stardust.png');
   box-shadow: 10px 10px 5px #2a2a2a;
@@ -57,8 +57,10 @@ h1, h2, h3, h4, h5, h6, .navbar {
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
+  color: white;      // added so text would show up over darker background image
 }
 
 body {
-  background: image_url('bg.png');
+  background: image_url('bg.png');  // may need lighter background image
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
