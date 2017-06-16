@@ -9,6 +9,9 @@
   </head>
 
   <body>
+
+<!-- next line and footer code block added 15 jun 17 for flexbox sticky footer  -->
+   <div id="flex-content-container">
     
 <!-- next 23 lines added 12 jun 17 for navbar toggler  -->
 <!--    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">  default styling  -->
@@ -76,5 +79,15 @@
     <% end %>
     
     <%= yield %>
+   </div>
+   
+   <div id="footer">
+      <div class="container">
+        <b>Footer Here</b>
+        <br />
+        <%= link_to 'Link', '#' %>
+      </div>
+   </div>
+    
   </body>
 </html>
