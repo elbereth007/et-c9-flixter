@@ -1,0 +1,17 @@
+<!-- firehose track 4, lesson 11 - file created 15 jun 17 -->
+
+<div class="booyah-box">
+  
+  <div class="row">
+    <div class="col-4">             <!-- avatar on left side -->
+      <%= image_tag 'user.png' %>   <!-- avatar, in apps/assets/images -->
+    </div>
+    
+    <div class="col-8" style="text-align: right">   <!-- metrics on right side -->
+      <h1><%= @user.email %></h1>
+      <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+    </div>
+  </div>
+  <div class="clear"></div>
+    
+</div>
