@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170614032343) do
+ActiveRecord::Schema.define(version: 20170616204348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-# users table added 13 jun 17 for user authentication
+# courses table created 16 jun 17 when ran rake db:migrate
+  create_table "courses", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.decimal "cost"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_courses_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
