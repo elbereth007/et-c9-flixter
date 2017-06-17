@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170616204348) do
+ActiveRecord::Schema.define(version: 20170617042446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-# courses table created 16 jun 17 when ran rake db:migrate
   create_table "courses", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -24,6 +23,14 @@ ActiveRecord::Schema.define(version: 20170616204348) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_courses_on_user_id"
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.string "title"
+    t.integer "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_sections_on_course_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   # next line added 16 jun 17 to hook up route for instructor/student courses pages
   resources :courses, only: [:index, :show]           # student course page
   namespace :instructor do                            # instructor course page
-    resources :courses, only: [:new, :create, :show]
+    resources :courses, only: [:new, :create, :show] do
+      resources :sections, only: [:new, :create]
+    end
   end
 end
