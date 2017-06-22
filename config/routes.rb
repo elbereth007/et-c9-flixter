@@ -8,8 +8,13 @@ Rails.application.routes.draw do
   # next line added 15 jun 17 to hook up route for users page
   resources :users, only: :show
   
-  # next line added 16 jun 17 to hook up route for instructor/student courses pages
+  # next line added 16 jun 17 to hook up route for student course pages
   resources :courses, only: [:index, :show]           # student course page
+
+  # next line added 21 jun 17 to hook up route for lesson pages
+  resources :lessons, only: [:show]                   # lesson show page
+  
+  # next line added 16 jun 17 to hook up route for instructor course pages
   namespace :instructor do                            # instructor course page
     resources :sections, only: [] do
       resources :lessons, only: [:new, :create]
