@@ -5,7 +5,10 @@
   <h1>Add a new section</h1>
   
 <!-- adds form to the view -->
-  <%= simple_form_for @section, url: instructor_course_sections_path(@course) do |f| %>
+<!--  <%= simple_form_for @section, url: instructor_course_sections_path(@course) do |f| %>  -->
+<!-- next line added 21 jun 17 -->
+    <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
+    
     <%= f.input :title %>
     <br />
     <%= f.submit "Add a section", class: 'btn btn-primary' %>
