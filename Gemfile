@@ -69,3 +69,9 @@ gem 'devise'
 
 # next line added 22 jun 17 to use carrierwave - lesson 22 (challenge)
 gem "carrierwave"
+
+# next line added 24 jun 17 to use figaro to securely configure things - lesson 22 (challenge)
+gem "figaro"
+
+# next line added 24 jun 17 so carrierwave can communicate with amazon s3
+gem "fog-aws"
