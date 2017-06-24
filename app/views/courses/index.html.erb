@@ -12,6 +12,10 @@
       <%= link_to course.title, course_path(course) %>
     </h2>
     <br/>
+    
+<!-- next line added 24 jun 17 for displaying images - lesson 22 (challenge) -->
+    <%= image_tag course.image, class: 'img-fluid' %>   <!-- shows image on index page -->
+  
     <div class="row">
       <div class="col-sm-8 col-12">
         <%= course.description %>
