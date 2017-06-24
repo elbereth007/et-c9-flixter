@@ -66,3 +66,6 @@ end
 # added 13 jun 17 for simpleform, devise (user authentication)
 gem 'simple_form'
 gem 'devise'
+
+# next line added 22 jun 17 to use carrierwave - lesson 22 (challenge)
+gem "carrierwave"

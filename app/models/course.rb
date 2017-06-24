@@ -7,4 +7,8 @@ class Course < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :cost, presence: true, numericality: {greater_than_or_equal_to: 0}
+  
+# next line added 23 jun 17 - mounts uploader for lesson 22 (challenge)
+    mount_uploader :image, ImageUploader
+    
 end

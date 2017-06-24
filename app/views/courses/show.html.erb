@@ -4,6 +4,10 @@
 
 <div class="booyah-box col-10 offset-1">
   <h1><%= @course.title %></h1>
+  
+<!-- next line added 23 jun 17 for displaying images - lesson 22 (challenge) -->
+  <%= image_tag @course.image, class: 'img-fluid' %>   <!-- shows image on course page -->
+  
   <br/>
   <div class="row">
     <div class="col-sm-4 col-12 text-center">

@@ -2,29 +2,27 @@
 
 <br />
 <div class="booyah-box col-10 offset-1">
-<!--  <h1 class="text-center"><%= @course.title %></h1>  -->
+
 <!-- next line added 21 jun 17 -->
   <h1 class="text-center"><%= current_course.title %></h1>
   <br/>
   
 <!-- next 2 lines added to preview course page as students would see it -->
-<!--  <%= link_to 'Preview As Student...', course_path(@course), class: 'btn btn-warning float-right' %>  -->
+
 <!-- next line added 21 jun 17 -->
   <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
   <br class="clr" />
   
 <!-- next 2 lines replaced by 3 lines below them for new section form -->
-<!--  <h2 class="text-center"><%= @course.description %></h2>
-  <h3 class="text-center"><%= @course.cost %></h3>  -->
+
   <div class="text-center">
 <!-- next line added 21 jun 17 -->
-<!--    <%= link_to 'Add a new section...', new_instructor_course_section_path(@course), class: 'btn btn-primary btn-lg' %>  -->
+
   <%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-primary btn-lg' %>
   </div>
   
   <ul>
-<!-- next line added 21 jun 17 -->
-<!--    <% @course.sections.each do |section| %>  -->
+
     <% current_course.sections.each do |section| %>
       <li>
         <%= section.title %>
