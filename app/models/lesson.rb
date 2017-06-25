@@ -2,4 +2,7 @@
 
 class Lesson < ApplicationRecord
   belongs_to :section
+  
+# next line added 25 jun 17 for video upload (lesson 24)
+  mount_uploader :video, VideoUploader
 end
