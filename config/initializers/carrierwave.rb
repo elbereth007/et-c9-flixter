@@ -3,6 +3,7 @@
 # config/initializers/carrierwave.rb
 
 CarrierWave.configure do |config|
+
 # fog code commented out and carrier-aws code added 25 jun 17 for better video upload (lesson 24)
 #    config.fog_provider = 'fog/aws'                        # required
 #    config.fog_credentials = {
