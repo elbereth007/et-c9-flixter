@@ -75,3 +75,6 @@ gem "figaro"
 
 # next line added 24 jun 17 so carrierwave can communicate with amazon s3
 gem "fog-aws"
+
+# next line added 24 jun 17 for image manipulation
+gem "mini_magick"

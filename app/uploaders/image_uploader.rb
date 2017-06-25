@@ -4,7 +4,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick         # uncommented 24 jun 17 for image manipulation w/imagemagick (track 4, lesson 23)
 
   # Choose what kind of storage to use for this uploader:
    storage :file  # use storage on local/C9 development file system
@@ -26,6 +26,10 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process scale: [200, 300]
+  
+# next line added 24 jun 17 to resize uploaded images to 800px wide x 350px high (track 4, lesson 23)
+  process resize_to_fill: [800, 350]
+  
   #
   # def scale(width, height)
   #   # do something
