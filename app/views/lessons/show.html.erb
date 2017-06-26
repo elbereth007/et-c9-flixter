@@ -10,7 +10,22 @@
     <%= current_lesson.subtitle %>
   </p>
   
-<!-- next line added 25 jun 17 for showing video details (lesson 24) -->
-  <%= link_to 'Video', current_lesson.video.to_s %>
+<!-- next 11 lines added 25 jun 17 for embedding video (lesson 25) -->
+<!--  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"  -->
+  <video id="my-video" class="video-js vjs-big-play-centered vjs-fluid" controls preload="auto"
+  poster="<%= image_path('black.jpg') %>" data-setup="{}">
+<!--    <source src="MY_VIDEO.mp4" type='video/mp4'>  -->
+    <source src="<%= current_lesson.video.to_s %>" type='video/mp4'>
+<!--    <source src="MY_VIDEO.webm" type='video/webm'>  -->
+    <noscript>
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+    </noscript>
+  </video>
+  
+<!-- next line added/deleted 25 jun 17 for showing video link on page (lesson 24) -->
+<!--  <%= link_to 'Video', current_lesson.video.to_s %>  -->
   
 </div>
