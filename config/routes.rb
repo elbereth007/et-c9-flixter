@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   # next line added 12 jun 17 to hook up route for landing page
   root "static_pages#index"
   
+  # next 3 lines added 27 jun 17 for student enrollments (lesson 27)
+  resources :courses, only: [:index, :show] do
+    resources :enrollments, only: :create
+  end
+  
   # next line added 15 jun 17 to hook up route for users page
   resources :users, only: :show
   
