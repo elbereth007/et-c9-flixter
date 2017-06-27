@@ -7,9 +7,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick         # uncommented 24 jun 17 for image manipulation w/imagemagick (track 4, lesson 23)
 
   # Choose what kind of storage to use for this uploader:
-  # storage :file    # use storage on local/C9 development file system
+   storage :file    # use storage on local/C9 development file system
   # storage :fog     # use storage on Amazon S3 production system
-  storage :aws     # use storage for carrierwave-aws video upload (lesson 24)
+  #storage :aws     # use storage for carrierwave-aws video upload (lesson 24)
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
