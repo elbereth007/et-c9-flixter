@@ -4,6 +4,9 @@ class Course < ApplicationRecord
   belongs_to :user
   has_many :sections
   
+# next line added 26 jun 17 for student enrollment (lesson 27)
+  has_many :enrollments
+  
   validates :title, presence: true
   validates :description, presence: true
   validates :cost, presence: true, numericality: {greater_than_or_equal_to: 0}
