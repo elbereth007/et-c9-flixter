@@ -23,6 +23,7 @@ class Instructor::CoursesController < ApplicationController
 #    @course = Course.find(params[:id])
   end
 
+
   private
   
 # next 9 lines added 21 jun 17

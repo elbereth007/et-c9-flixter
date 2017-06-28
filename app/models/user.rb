@@ -13,7 +13,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  # next xx lines added 27 jun 17 for checking if a student is enrolled in a particuoar course (lesson 27)
+  # next 11 lines added/modified 27 jun 17 for checking if a student is enrolled in a particuoar course (lesson 27)
   def enrolled_in?(course)
 #    enrolled_courses = []
 #    enrollments.each do |enrollment|
