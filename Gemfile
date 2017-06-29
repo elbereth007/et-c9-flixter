@@ -81,3 +81,6 @@ gem "mini_magick"
 
 # next line added 25 jun 17 for video upload (lesson 24)
 gem 'carrierwave-aws'
+
+# next line added 28 jun 17 for accepting payments (lesson 29)
+gem 'stripe'
