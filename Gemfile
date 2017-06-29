@@ -84,3 +84,6 @@ gem 'carrierwave-aws'
 
 # next line added 28 jun 17 for accepting payments (lesson 29)
 gem 'stripe'
+
+# next line added 28 jun 17 for reordering lessons (lesson 30)
+gem 'ranked-model'
