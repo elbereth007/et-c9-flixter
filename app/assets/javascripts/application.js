@@ -23,3 +23,6 @@
 //= require bootstrap-sprockets
 
 //= require_tree .
+
+// next line added 3 jul 17 for drag & drop lessons (lesson 31)
+//= require jquery-ui

@@ -87,3 +87,6 @@ gem 'stripe'
 
 # next line added 28 jun 17 for reordering lessons (lesson 30)
 gem 'ranked-model'
+
+# next line added 28 jun 17 for dragging and dropping lessons (lesson 31)
+gem 'jquery-ui-rails'
