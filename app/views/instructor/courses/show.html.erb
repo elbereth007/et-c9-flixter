@@ -2,11 +2,17 @@
 
 <!-- next 9 lines added 3 jul 17 (lesson 31) -->
 <!-- removed from function below:     $('.lessons li').hide('slow');  -->
+<!-- modified 4 jul 17 for lesson 31 -->
 <script>
   $(function() {
     $('.lessons').sortable({
       update: function( event, ui ) {
-        alert("LessonId: " + ui.item.data('item-id') + " Index: " + ui.item.index());
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { lesson: { row_order_position: ui.item.index() } }
+        });
       }
     });
   });
@@ -46,7 +52,8 @@
         <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
        <ul class="lessons">     <!-- class added 3 jul 17 (lesson 31) -->
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li data-item-id=<%= lesson.id %>>      <!-- data item added 3 jul 17 (lesson 31) -->
+            <li data-update-url="<%= instructor_lesson_path(lesson) %>">    <!-- data update url added 4 jul 17 (lesson 31) -->
+<!--            <li data-item-id=<%= lesson.id %>>       data item added 3 jul 17 (lesson 31) -->
               <b><%= lesson.title %></b>
               -
               <%= lesson.subtitle %>

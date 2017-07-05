@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   
   # next line added 16 jun 17 to hook up route for instructor course pages
   namespace :instructor do                            # instructor course page
+  # next line added 4 jul 17 for syncing of lesson updates (lesson 31)
+    resources :lessons, only: [:update]
     resources :sections, only: [] do
       resources :lessons, only: [:new, :create]
     end
