@@ -90,3 +90,6 @@ gem 'ranked-model'
 
 # next line added 28 jun 17 for dragging and dropping lessons (lesson 31)
 gem 'jquery-ui-rails'
+
+# next line added 6 jul 17 for styling instructor page (lesson 33)
+gem 'font-awesome-rails'

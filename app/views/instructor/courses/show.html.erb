@@ -61,18 +61,35 @@
   <ul class="sections">   <!-- class="sections" added 6 jul 17 for lesson/challenge 32 -->
 
     <% current_course.sections.rank(:row_order).each do |section| %>   <!-- rank(:row_order) added 6 jul 17 for lesson/challenge 32 -->
-      <li data-update-url="<%= instructor_section_path(section) %>">    <!-- data update url added 6 jul 17 (lesson/challenge 32) -->
-        <%= section.title %>
+      <li data-update-url="<%= instructor_section_path(section) %>" class="section-li">    <!-- data update url added 6 jul 17 (lesson/challenge 32), styling (lesson 33) -->
+        <div class="header">    <!-- div added 6 jul 17 (lesson 33) -->
+          <span class="fa fa-ellipsis-v"></span>  <!-- added 6 jul 17 for styling instructor page w/3 vertical dots (lesson 33) -->
+          <%= section.title %>
+        </div>
         
 <!-- next lines added 17 jun 17 for lesson form -->
         <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
-       <ul class="lessons">     <!-- class added 3 jul 17 (lesson 31) -->
+        <br class="clr" />
+        <br class="clr" />
+        <ul class="lessons">     <!-- class added 3 jul 17 (lesson 31) -->
           <% section.lessons.rank(:row_order).each do |lesson| %>
             <li data-update-url="<%= instructor_lesson_path(lesson) %>">    <!-- data update url added 4 jul 17 (lesson 31) -->
+              <div class="row">
+                <div class="col-1">
+                  <br />
+                  <span class="fa fa-ellipsis-v"></span>  <!-- added 6 jul 17 for styling instructor page w/3 vertical dots (lesson 33) -->
+                </div>
+                <div class="col-11">
 <!--            <li data-item-id=<%= lesson.id %>>       data item added 3 jul 17 (lesson 31) -->
-              <b><%= lesson.title %></b>
-              -
-              <%= lesson.subtitle %>
+                  <p>
+                    <b><%= lesson.title %></b>
+                  </p>
+                  <p>
+                    <%= lesson.subtitle %>
+                  </p>
+                </div>
+              </div>
+              <br class="clr" />
             </li>
           <% end %>
         </ul>
