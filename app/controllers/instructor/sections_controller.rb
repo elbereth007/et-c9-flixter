@@ -19,7 +19,7 @@ class Instructor::SectionsController < ApplicationController
   
 # next 4 lines added 6 jul 17 for syncing section updates (lesson/challenge 32)
   def update
-    current_course.sections.update_attributes(section_params)
+    current_section.update_attributes(section_params)
     render plain: 'updated!'
   end
 
@@ -54,7 +54,7 @@ class Instructor::SectionsController < ApplicationController
   helper_method :current_section
   
   def current_section
-    @current_section ||= Section.find(params[:id])
+    section ||= Section.find(params[:id])
   end
 
   def section_params
