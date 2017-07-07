@@ -50,6 +50,13 @@ class Instructor::SectionsController < ApplicationController
     end
   end
 
+# next 4 lines added 6 jul 17 for section syncing (lesson/challenge 32)  
+  helper_method :current_section
+  
+  def current_section
+    @current_section ||= Section.find(params[:id])
+  end
+
   def section_params
     params.require(:section).permit(:title, :row_order_position)  # :row_order_position added 6 jul 17 for syncing section updates (lesson/challenge 32)
   end

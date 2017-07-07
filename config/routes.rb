@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   namespace :instructor do                            # instructor course page
   # next line added 4 jul 17 for syncing of lesson updates (lesson 31)
     resources :lessons, only: [:update]
-    resources :sections, only: [] do
+    resources :sections, only: [:update] do       # :update added 6 jul 17 for syncing sections (lesson/challenge 32)
       resources :lessons, only: [:new, :create]
     end
     resources :courses, only: [:new, :create, :show] do
