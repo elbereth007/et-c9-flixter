@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     resources :courses, only: [:new, :create, :show] do
         
 # next line added 17 jun 17 to hook up route for instructor lesson page
-      resources :sections, only: [:new, :create]
+      resources :sections, only: [:new, :create, :update]   # :update added 6 jul 17 (lesson/challenge 32)
     end
   end
 end

@@ -18,6 +18,22 @@
   });
 </script>
 
+<!-- next 13 lines added 6 jul 17 (lesson/challenge 32) -->
+<script>
+  $(function() {
+    $('.sections').sortable({
+      update: function( event, ui ) {
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { section: { row_order_position: ui.item.index() } }
+        });
+      }
+    });
+  });
+</script>
+
 <br />
 <div class="booyah-box col-10 offset-1">
 
@@ -42,10 +58,10 @@
   <%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-primary btn-lg' %>
   </div>
   
-  <ul>
+  <ul class="sections">   <!-- class="sections" added 6 jul 17 for lesson/challenge 32 -->
 
-    <% current_course.sections.each do |section| %>
-      <li>
+    <% current_course.sections.rank(:row_order).each do |section| %>   <!-- rank(:row_order) added 6 jul 17 for lesson/challenge 32 -->
+      <li data-update-url="<%= instructor_section_path(section) %>">    <!-- data update url added 6 jul 17 (lesson/challenge 32) -->
         <%= section.title %>
         
 <!-- next lines added 17 jun 17 for lesson form -->

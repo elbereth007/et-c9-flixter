@@ -60,7 +60,7 @@
   
 <!-- next 16 lines added 21 jun 17 to list course's sections/lessons on course details page -->
   <div class="col-12">
-    <% @course.sections.each do |section| %>
+    <% @course.sections.rank(:row_order).each do |section| %>   <!-- rank(:row_order) added 6 jul 17 for lesson/challenge 32 -->
     <br /><br />
       <div class="section">
         <h3><%= section.title %></h3>
