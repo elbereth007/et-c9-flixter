@@ -3,13 +3,14 @@
 class Instructor::SectionsController < ApplicationController
 # next 2 lines added 21 jun 17
   before_action :authenticate_user!
-  before_action :require_authorized_for_current_course, only: [:new, :create]
+  before_action :require_authorized_for_current_course, only: [:create] # :new removed 7 juol 17 (lesson 35)
   before_action :require_authorized_for_current_section, only: [:update] # added 6 jul 17 for syncing section updates (lesson/challenge 32)
   
-  def new
+# new method deleted 7 jul 17 (lesson 35)
+#  def new
 #    @course = Course.find(params[:course_id])  # modified 21 jun 17
-    @section = Section.new
-  end
+#    @section = Section.new
+#  end
   
   def create        # modified 21 jun 17
 #    @course = Course.find(params[:course_id])

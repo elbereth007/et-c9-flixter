@@ -21,6 +21,8 @@ class Instructor::CoursesController < ApplicationController
   
   def show
 #    @course = Course.find(params[:id])
+# next line added 7 jul 17 for new section form modal (lesson 35)
+    @section = Section.new
   end
 
 
