@@ -41,6 +41,10 @@
 <!-- lines added 13 jun 17  -->
         <ul class="navbar-nav">
           <% if user_signed_in? %>
+<!-- next 3 lines added 7 jul 17 for teacher dashboard (lesson 34) -->
+          <li class="nav-item">
+            <%= link_to 'My Dashboard', dashboard_path %>
+          </li>
 <!-- next 3 lines added 15 jun 17 for user show page -->
           <li class="nav-item">
             <%= link_to 'My Profile', user_path(current_user), class: 'nav-link' %>

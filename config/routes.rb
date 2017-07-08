@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
+  # next line added 7 jul 17 for teacher dashboard (lesson 34)
+  resource :dashboard, only: [:show]
+  
   # next line added 12 jun 17 to hook up route for landing page
   root "static_pages#index"
   
