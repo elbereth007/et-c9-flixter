@@ -2,21 +2,22 @@
 
 class Instructor::LessonsController < ApplicationController
   before_action :authenticate_user!       # user must be logged in to access lessons
-  before_action :require_authorized_for_current_section, only: [:new, :create]
+  before_action :require_authorized_for_current_section, only: [:create]  # :new action removed 9 jul 17 for new lessom form modal (lesson 36) clean-up
   before_action :require_authorized_for_current_lesson, only: [:update]
-  
-  def new
+ 
+# entire new method deleted 9 jul 17 for new lesson form modal (lesson 36) clean-up, since modal used now
+#  def new
 #    @section = Section.find(params[:section_id])
 # next line added 21 jun 17
 #    @section = current_section
-
+#
 # next 3 lines added 21 jun 17
 #    if current_section.course.user != current_user     # course creator must be current logged-in user to create new lesson
 #      return render plain: 'Unauthorized', status: :unauthorized
 #    end
-    
-    @lesson = Lesson.new
-  end
+#   
+#    @lesson = Lesson.new
+#  end
   
   def create
 #    @section = Section.find(params[:section_id])
