@@ -23,6 +23,8 @@ class Instructor::CoursesController < ApplicationController
 #    @course = Course.find(params[:id])
 # next line added 7 jul 17 for new section form modal (lesson 35)
     @section = Section.new
+# next line added 8 jul 17 for new lesson form modal (lesson 36)
+     @lesson = Lesson.new
   end
 
 
