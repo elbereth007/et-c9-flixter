@@ -6,9 +6,20 @@
   
 <!--  <h1>Lesson Show Page</h1>  -->
   <h1><%= current_lesson.title %></h1>
-  <p>
+  <p class="float-left">                <!-- class added 9 jul 17 for next lesson button (lesson 37) -->
     <%= current_lesson.subtitle %>
   </p>
+  
+<!-- next 8 lines added 9 jul 17 for next lesson button (lesson 37) -->
+  <% if current_lesson.next_lesson.present? %>
+    <%= link_to lesson_path(current_lesson.next_lesson), class: 'btn btn-default float-right' do %>
+      Next Lesson &nbsp;
+      <span class="fa fa-forward"></span>
+    <% end %>
+  <% end %>
+
+  <br class="clr" />
+  <br />
   
 <!-- next 11 lines added 25 jun 17 for embedding video (lesson 25) -->
 <!--  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"  -->

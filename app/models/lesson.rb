@@ -10,4 +10,13 @@ class Lesson < ApplicationRecord
   include RankedModel
   ranks :row_order, with_same: :section_id
   
+# next_lesson method added 9 jul 17 for next lesson (lesson 37)
+  def next_lesson
+    lesson = section.lessons.where("row_order > ?", self.row_order).rank(:row_order).first
+    if lesson.blank? && section.next_section
+      return section.next_section.lessons.rank(:row_order).first
+    end
+    return lesson
+  end
+  
 end
