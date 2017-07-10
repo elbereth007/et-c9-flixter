@@ -16,4 +16,7 @@ class Section < ApplicationRecord
     return section
   end
   
+# add code for previous lesson section
+  
+  
 end

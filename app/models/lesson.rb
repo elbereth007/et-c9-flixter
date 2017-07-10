@@ -19,4 +19,6 @@ class Lesson < ApplicationRecord
     return lesson
   end
   
+# add code for previous lesson button
+  
 end

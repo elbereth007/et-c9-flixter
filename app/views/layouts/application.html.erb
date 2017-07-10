@@ -79,10 +79,57 @@
    <div id="footer">
       <div class="container">
         
-<!-- added 16 jun 17 to link to page to create new course -->
+<!-- next xx lines added 9 jul 17 for finishing footer (lesson 38) -->
+        <div class="row">
+      <div class="col-12 col-sm-3">
         <b>Teachers</b>
         <br />
         <%= link_to 'Teach a Course', new_instructor_course_path %>
+        <br />
+        <%= link_to 'My Dashboard', dashboard_path %>
+      </div>
+      <div class="col-12 col-sm-3">
+        <b>About</b>
+        <br />
+        <%= link_to 'Team', '#' %>
+        <br />
+        <%= link_to 'Careers', '#' %>
+        <br />
+        <%= link_to 'Privacy Policy', '#' %>
+      </div>
+      <div class="col-12 col-sm-3">
+        <b>Contact</b>
+        <br />
+        ken@thefirehoseproject.com
+        <br />
+        One Kendall Square
+        <br />
+        Cambridge MA, 02113
+      </div>
+      <div class="col-12 col-sm-3 social">
+        <b>Social</b>
+        <br />
+        <br />
+        <%= link_to 'https://github.com/elbereth007' do %>
+          <span class="fa fa-github-square fa-2x social-button"></span>
+        <% end %>
+        <%= link_to 'https://www.linkedin.com/in/victorchristensen/' do %>
+          <span class="fa fa-linkedin-square fa-2x social-button"></span>
+        <% end %>
+        <%= link_to 'https://twitter.com/VicChristensen' do %>
+          <span class="fa fa-twitter-square fa-2x social-button"></span>
+        <% end %>
+      </div>
+    </div>
+        
+<!-- added 16 jun 17 to link to page to create new course, deleted 9 jul 17 for finishing footer (lesson 38)
+        <b>Teachers</b>
+        <br />
+        <%= link_to 'Teach a Course', new_instructor_course_path %> -->
+        
+<!-- next 2 lines added 9 jul 17, then deleted for finishing footer (lesson 38)
+        <br />
+        <%= link_to 'My Dashboard', dashboard_path %> -->
         
       </div>
    </div>
