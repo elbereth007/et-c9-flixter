@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   # next line added 12 jun 17 to hook up route for landing page
   root "static_pages#index"
   
+  # next line added 9 jul 17 for static pages (lesson 39)
+  get 'privacy', to: 'static_pages#privacy'
+  get 'team', to: 'static_pages#team'
+  get 'careers', to: 'static_pages#careers'
+  
   # next 3 lines added 27 jun 17 for student enrollments (lesson 27)
   resources :courses, only: [:index, :show] do
     resources :enrollments, only: :create

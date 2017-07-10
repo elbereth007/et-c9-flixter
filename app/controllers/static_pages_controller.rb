@@ -6,4 +6,16 @@ class StaticPagesController < ApplicationController
         
     end
     
+# next 3 methods added 9 jul 17 for static pages (lesson 39)
+    def privacy
+      
+    end
+    
+    def team
+      
+    end
+    
+    def careers
+      
+    end
 end

@@ -19,6 +19,13 @@ class Lesson < ApplicationRecord
     return lesson
   end
   
-# add code for previous lesson button
+# previous_lesson method added 9 jul 17 for bonus to lesson 37
+  def previous_lesson
+    lesson = section.lessons.where("row_order < ?", self.row_order).rank(:row_order).last
+    if lesson.blank? && section.previous_section
+      return section.previous_section.lessons.rank(:row_order).last
+    end
+    return lesson
+  end
   
 end

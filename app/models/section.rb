@@ -16,7 +16,11 @@ class Section < ApplicationRecord
     return section
   end
   
-# add code for previous lesson section
+# previous_section method added 9 jul 17 for bonus to lesson 37
+  def previous_section
+    section = course.sections.where("row_order < ?", self.row_order).rank(:row_order).last
+    return section
+  end
   
   
 end
